@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.cpp
+Board.h
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.h
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.h
+Piece.h
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.h
+vector
+-
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.cpp
+GameManager.h
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.h
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.h
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.cpp
+Piece.h
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.h
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.h
+vector
+-
+
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/main.cpp
+iostream
+-
+Piece.h
+/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.h
+
