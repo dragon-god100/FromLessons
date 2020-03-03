@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1582460940 source:c:\projects\workermanagement\main.cpp
+	<iostream>
+	"WorkerCollection.h"
+
+1582461041 c:\projects\workermanagement\include\workercollection.h
+	<iostream>
+	<string>
+
+1582461011 source:c:\projects\workermanagement\src\workercollection.cpp
+	"WorkerCollection.h"
+
