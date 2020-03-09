@@ -4,40 +4,15 @@
 #include "Piece.h"
 #include <vector>
 
-typedef struct {
-     signed int start_cord_x;
-     signed int start_cord_y;
-}Start_Cord;
-
-
 class Board
 {
-     public:
-          // create board
-          Board(signed int x , signed int y);
-
-
-
-     private:
-          std::vector<Piece>pieces;
-          std::vector
-          signed int  start_cord_x;
-          signed int start_cord_y;
-          bool white;
-
-          SetPawnStartPos();
-          SetKnightStartPos();
-          SetQueenStartPos();
-          SetKingStartPos();
-          SetBishopStartPos();
-          SetRookStartPos();
-
-
-
-
-
-
-
+public:
+    // create board
+    Board();
+private:
+    std::vector<Piece> pieces;
+    const unsigned int SIZE_X = 8;
+    const unsigned int SIZE_Y = 8;
 };
 
 #endif // BOARD_H

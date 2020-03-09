@@ -1,341 +1,76 @@
 #include "Piece.h"
 
-Piece::Piece(signed int x , signed int y , PicesType type)
+Piece::Piece(signed int x , signed int y , PieceType type, bool is_black)
 {
-     this-> black_or_white = false;
-     this-> pos_x = x;
+     this->is_black = is_black;
+     this->pos_x = x;
      this->pos_y = y;
-     this-> type = type;
+     this->type = type;
 
      //set moves
-         switch(this->type) {
-        case PieceType::PAWN:
-            this->SetPawnMovements();
-            break;
-        case PieceType::KING:
-            this->SetKingMovements();
-            break;
-        case PieceType::QUEEN:
-            this->SetQueenMovements();
-            break;
-        case PieceType::KNIGHT:
-            this->SetKnightMovements();
-            break;
-        case PieceType::ROOK:
-            this->SetRookMovements();
-            break;
-        case PieceType::BISHOP:
-            this->SetBishopMovement();
-            break;
+     switch(this->type) {
+         case PieceType::PAWN: this->setPawnMovements(); break;
+         case PieceType::KING: this->setKingMovements(); break;
+         case PieceType::QUEEN: this->setQueenMovements(); break;
+         case PieceType::KNIGHT: this->setKnightMovements(); break;
+         case PieceType::ROOK: this->setRookMovements(); break;
+         case PieceType::BISHOP: this->setBishopMovements(); break;
     }
 }
 
-void Piece::SetPawnMovements(){
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 1;
-     this->moves[0].to_pos_x = 0;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = false;
+void Piece::addMovement(Position from, Position to, MovementType type) {
+    this->moves.push_back(MovementArea()); // Add element
+    this->moves.back().positions.push_back(from);
+    this->moves.back().positions.push_back(to);
+    this->moves.back().type = type;
 }
 
-void Piece::SetKingMovements(){
-     this->SetPawnMovements();
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = -1;
-     this->moves[0].to_pos_x = 0;
-     this->moves[0].to_pos_y = -1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = -1;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = 0;
-     this->moves[0].vector_movement = false;
-
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 1;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 0;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = -1;
-     this->moves[0].from_pos_y = -1;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = -1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 1;
-     this->moves[0].from_pos_y = -1;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = -1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = -1;
-     this->moves[0].from_pos_y = 1;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 1;
-     this->moves[0].from_pos_y = 1;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = false;
+void Piece::addMovement(Position vector, MovementType type) {
+    this->moves.push_back(MovementArea());
+    this->moves.back().positions.push_back(vector);
+    this->moves.back().type = type;
 }
 
-void Piece::SetRookMovements(){
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 0;
-     this->moves[0].vector_movement = true;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 0;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = true;
+void Piece::setPawnMovements(){
+    this->addMovement(Position(0, 1), Position(0, 1), MovementType::REGULAR);
+    this->addMovement(Position(-1, 1), Position(-1, 1), MovementType::EATING);
+    this->addMovement(Position(1, 1), Position(1, 1), MovementType::EATING);
 }
 
-void Piece::SetBishopMovement(){
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = true;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::REGULAR;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = true;
+void Piece::setKingMovements(){
+    this->addMovement(Position(0, 1), Position(0, 1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-1, 1), Position(-1, 1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, 1), Position(1, 1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-1, 0), Position(-1, 0), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, 0), Position(1, 0), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-1, -1), Position(-1, -1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(0, -1), Position(0, -1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, -1), Position(1, -1), MovementType::REGULAR_EATING);
 
 }
 
-void Piece::SetQueenMovements(){
-          SetBishopMovement();
-          SetRookMovements();
-
-     }
-     void Piece::SetKnightMovements() {
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = 1;
-    this->moves[0].from_dis_y = 2;
-    this->moves[0].to_dis_x = 1;
-    this->moves[0].to_dis_y = 2;
-    this->moves[0].vector_movement = false;
-
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = -1;
-    this->moves[0].from_dis_y = 2;
-    this->moves[0].to_dis_x = -1;
-    this->moves[0].to_dis_y = 2;
-    this->moves[0].vector_movement = false;
-
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = 1;
-    this->moves[0].from_dis_y = -2;
-    this->moves[0].to_dis_x = 1;
-    this->moves[0].to_dis_y = -2;
-    this->moves[0].vector_movement = false;
-
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = -1;
-    this->moves[0].from_dis_y = -2;
-    this->moves[0].to_dis_x = -1;
-    this->moves[0].to_dis_y = -2;
-    this->moves[0].vector_movement = false;
-    // DO THIS
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = 2;
-    this->moves[0].from_dis_y = 1;
-    this->moves[0].to_dis_x = 2;
-    this->moves[0].to_dis_y = 1;
-    this->moves[0].vector_movement = false;
-
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = 2;
-    this->moves[0].from_dis_y = -1;
-    this->moves[0].to_dis_x = 2;
-    this->moves[0].to_dis_y = -1;
-    this->moves[0].vector_movement = false;
-
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = -2;
-    this->moves[0].from_dis_y = -1;
-    this->moves[0].to_dis_x = -2;
-    this->moves[0].to_dis_y = -1;
-    this->moves[0].vector_movement = false;
-
-    this->moves.push_back(MovementArea()); // Add new element to array
-    this->moves[0].type = MovementType::REGULAR;
-    this->moves[0].from_dis_x = -2;
-    this->moves[0].from_dis_y = 1;
-    this->moves[0].to_dis_x = -2;
-    this->moves[0].to_dis_y = 1;
-    this->moves[0].vector_movement = false;
+void Piece::setRookMovements(){
+    this->addMovement(Position(0, 1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, 0), MovementType::REGULAR_EATING);
 }
 
-void Piece::SetPawnMovements(){
-      this->moves[0].push_back(MovementArea());
-      this->moves[0].type = MovementType::EATING;
-      this->moves[0].from_dis_x = -1;
-      this->moves[0].from_dis_y = 1;
-      this->moves[0].to_dis_x = -1;
-      this->moves[0].from_dis_y = 1;
-      this->moves[0].vector_movement = false;
-
-      this->moves[0].push_back(MovementArea());
-      this->moves[0].type = MovementType::EATING;
-      this->moves[0].from_dis_x = 1;
-      this->moves[0].from_dis_y = 1;
-      this->moves[0].to_dis_x = 1;
-      this->moves[0].from_dis_y = 1;
-      this->moves[0].vector_movement = false;
-
+void Piece::setBishopMovements(){
+    this->addMovement(Position(-1, -1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, 1), MovementType::REGULAR_EATING);
 }
 
-void Piece::SetBishopMovement(){
-     this->moves[0].push_back(MovementArea());
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 1;
-     if(this->moves[0].to_pos_x = int start_pos || this->moves[0].to_pos_y = int end_pos){
-          // i dont what to do now
-          // i think the solution its delete piece that die
-     }
-     this->moves[0].vector_movement = true;
-
-
-     this->moves[0].push_back(MovementArea());
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = 1;
-     if(this->moves[0].to_pos_x = int start_pos || this->moves[0].to_pos_y = int end_pos){
-          // i dont what to do now
-          // i think the solution its delete piece that die
-     }
-     this->moves[0].vector_movement = true;
-
+void Piece::setQueenMovements(){
+    this->setBishopMovements();
+    this->setRookMovements();
 }
 
-void Piece::SetKingMovements(){
-     this->SetPawnMovements();
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = -1;
-     this->moves[0].to_pos_x = 0;
-     this->moves[0].to_pos_y = -1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = -1;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = 0;
-     this->moves[0].vector_movement = false;
-
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 1;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 0;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = -1;
-     this->moves[0].from_pos_y = -1;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = -1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 1;
-     this->moves[0].from_pos_y = -1;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = -1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = -1;
-     this->moves[0].from_pos_y = 1;
-     this->moves[0].to_pos_x = -1;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = false;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 1;
-     this->moves[0].from_pos_y = 1;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = false;
+void Piece::setKnightMovements() {
+    this->addMovement(Position(2, 1), Position(2, 1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(2, -1), Position(2, -1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-2, 1), Position(-2, 1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-2, -1), Position(-2, -1), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, 2), Position(1, 2), MovementType::REGULAR_EATING);
+    this->addMovement(Position(1, -2), Position(1, -2), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-1, 2), Position(-1, 2), MovementType::REGULAR_EATING);
+    this->addMovement(Position(-1, -2), Position(-1, -2), MovementType::REGULAR_EATING);
 }
-
- void Piece::SetRookMovements() {
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 1;
-     this->moves[0].to_pos_y = 0;
-     this->moves[0].vector_movement = true;
-
-     this->moves.push_back(MovementArea());//add new element to array
-     this->moves[0].type = MovementType::EATING;
-     this->moves[0].from_pos_x = 0;
-     this->moves[0].from_pos_y = 0;
-     this->moves[0].to_pos_x = 0;
-     this->moves[0].to_pos_y = 1;
-     this->moves[0].vector_movement = true;
- }
-
-
-
-
-

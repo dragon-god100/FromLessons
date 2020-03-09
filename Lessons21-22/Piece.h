@@ -2,74 +2,32 @@
 #define PIECE_H
 
 #include <vector>
+#include "definitions.h"
 
 using namespace std;
 
-enum class MovementType{
-     REGULAR,
-     REGULAR_EATING,
-    EATING
-};
-
-enum class PiecesType{
-     KING,
-    QUEEN,
-    ROOK,
-    KNIGHT,
-    BISHOP,
-    PAWN
-};
-
-
-struct MovementArea {
-     signed int from_pos_x;
-     signed int from_pos_y;
-
-     signed int to_pos_x;
-     signed int to_pos_y;
-
-     //add start position and end position
-     int start_pos;
-     int end_pos;
-
-     bool vector_movement;
-     MovementType type;
-};
-
-
-
-
-
-
-class Piece
+class Piece // SturdyCurl
 {
-     public:
-          // Create piece
-          Piece(signed int x , signed int y , PicesType type);
+public:
+    // Create piece
+    Piece(signed int x , signed int y , PieceType type, bool is_black = false);
 
-          // Set group (B or W) done
-          // Set movements
-          // Set type
+private:
+    bool is_black; // under_score
+    signed int pos_x;
+    signed int pos_y;
+    vector<MovementArea> moves;
+    PieceType type;
 
-     protected:
-
-     private:
-          bool black_or_white;
-          signed int pos_x;
-          signed int pos_y;
-          vector<MovementArea>moves;
-          PiecesType type;
-
-
-          //helper functions
-          SetPawnMovements();
-          SetKnightMovements();
-          SetQueenMovements();
-          SetKingMovements();
-          SetBishopMovements();
-          SetRookMovements();
-
-
+    //helper functions
+    void addMovement(Position from, Position to, MovementType type);
+    void addMovement(Position vector, MovementType type);
+    void setPawnMovements(); // camelCase
+    void setKnightMovements();
+    void setQueenMovements();
+    void setKingMovements();
+    void setBishopMovements();
+    void setRookMovements();
 };
 
 #endif // PIECE_H
