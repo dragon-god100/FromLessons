@@ -1,0 +1,3 @@
+/home/lesscomplex/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lesscomplex/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lesscomplex/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/Chess.dir
