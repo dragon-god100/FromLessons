@@ -10,10 +10,11 @@
 
 class Board {
 public:
-
+    Board();
 private:
     // Collection of all pieces on boards
     std::vector<Piece> pieces;
+    const int SIZE_X = 8, SIZE_Y = 8;
 };
 
 

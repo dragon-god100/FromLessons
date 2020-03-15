@@ -48,10 +48,10 @@ RM = /cygdrive/c/Users/Lotus/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess
+CMAKE_SOURCE_DIR = /cygdrive/c/Projects/FromLessons/Lessons21-22
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles /cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,33 +150,6 @@ Board.cpp.s:
 	$(MAKE) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
-GameManager.o: GameManager.cpp.o
-
-.PHONY : GameManager.o
-
-# target to build an object file
-GameManager.cpp.o:
-	$(MAKE) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/GameManager.cpp.o
-.PHONY : GameManager.cpp.o
-
-GameManager.i: GameManager.cpp.i
-
-.PHONY : GameManager.i
-
-# target to preprocess a source file
-GameManager.cpp.i:
-	$(MAKE) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/GameManager.cpp.i
-.PHONY : GameManager.cpp.i
-
-GameManager.s: GameManager.cpp.s
-
-.PHONY : GameManager.s
-
-# target to generate assembly for a file
-GameManager.cpp.s:
-	$(MAKE) -f CMakeFiles/Chess.dir/build.make CMakeFiles/Chess.dir/GameManager.cpp.s
-.PHONY : GameManager.cpp.s
-
 Piece.o: Piece.cpp.o
 
 .PHONY : Piece.o
@@ -243,9 +216,6 @@ help:
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
-	@echo "... GameManager.o"
-	@echo "... GameManager.i"
-	@echo "... GameManager.s"
 	@echo "... Piece.o"
 	@echo "... Piece.i"
 	@echo "... Piece.s"

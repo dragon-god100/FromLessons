@@ -3,3 +3,8 @@
 //
 
 #include "Board.h"
+
+Board::Board() {
+
+    for(int i = 0; i < )
+}

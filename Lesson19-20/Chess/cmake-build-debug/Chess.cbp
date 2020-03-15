@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Chess">
-				<Option output="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Chess.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Chess.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -42,15 +42,15 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 Chess"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 Chess"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Chess/fast">
-				<Option output="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Chess.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug"/>
+				<Option output="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Chess.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,45 +63,45 @@
 					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.2.0/../../../../lib/../include/w32api"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 Chess/fast"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 Chess/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug"/>
+				<Option working_dir="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j8 -f &quot;/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.cpp">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Board.cpp">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.h">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Board.h">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.cpp">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/GameManager.cpp">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.h">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/GameManager.h">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.cpp">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Piece.cpp">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.h">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Piece.h">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/main.cpp">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/main.cpp">
 			<Option target="Chess"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/CMakeLists.txt">
+		<Unit filename="/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

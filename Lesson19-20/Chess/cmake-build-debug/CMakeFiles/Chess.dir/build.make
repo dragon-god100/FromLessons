@@ -43,10 +43,10 @@ RM = /cygdrive/c/Users/Lotus/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe -E r
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess
+CMAKE_SOURCE_DIR = /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Chess.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/Chess.dir/flags.make
 
 CMakeFiles/Chess.dir/main.cpp.o: CMakeFiles/Chess.dir/flags.make
 CMakeFiles/Chess.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Chess.dir/main.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/main.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Chess.dir/main.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/main.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/main.cpp
 
 CMakeFiles/Chess.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chess.dir/main.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/main.cpp > CMakeFiles/Chess.dir/main.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/main.cpp > CMakeFiles/Chess.dir/main.cpp.i
 
 CMakeFiles/Chess.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/main.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/main.cpp -o CMakeFiles/Chess.dir/main.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/main.cpp -o CMakeFiles/Chess.dir/main.cpp.s
 
 CMakeFiles/Chess.dir/Board.cpp.o: CMakeFiles/Chess.dir/flags.make
 CMakeFiles/Chess.dir/Board.cpp.o: ../Board.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Chess.dir/Board.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/Board.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Chess.dir/Board.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/Board.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Board.cpp
 
 CMakeFiles/Chess.dir/Board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chess.dir/Board.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.cpp > CMakeFiles/Chess.dir/Board.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Board.cpp > CMakeFiles/Chess.dir/Board.cpp.i
 
 CMakeFiles/Chess.dir/Board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/Board.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.cpp -o CMakeFiles/Chess.dir/Board.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Board.cpp -o CMakeFiles/Chess.dir/Board.cpp.s
 
 CMakeFiles/Chess.dir/Piece.cpp.o: CMakeFiles/Chess.dir/flags.make
 CMakeFiles/Chess.dir/Piece.cpp.o: ../Piece.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Chess.dir/Piece.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/Piece.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Chess.dir/Piece.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/Piece.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Piece.cpp
 
 CMakeFiles/Chess.dir/Piece.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chess.dir/Piece.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.cpp > CMakeFiles/Chess.dir/Piece.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Piece.cpp > CMakeFiles/Chess.dir/Piece.cpp.i
 
 CMakeFiles/Chess.dir/Piece.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/Piece.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.cpp -o CMakeFiles/Chess.dir/Piece.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Piece.cpp -o CMakeFiles/Chess.dir/Piece.cpp.s
 
 CMakeFiles/Chess.dir/GameManager.cpp.o: CMakeFiles/Chess.dir/flags.make
 CMakeFiles/Chess.dir/GameManager.cpp.o: ../GameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Chess.dir/GameManager.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/GameManager.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Chess.dir/GameManager.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Chess.dir/GameManager.cpp.o -c /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/GameManager.cpp
 
 CMakeFiles/Chess.dir/GameManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Chess.dir/GameManager.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.cpp > CMakeFiles/Chess.dir/GameManager.cpp.i
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/GameManager.cpp > CMakeFiles/Chess.dir/GameManager.cpp.i
 
 CMakeFiles/Chess.dir/GameManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Chess.dir/GameManager.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.cpp -o CMakeFiles/Chess.dir/GameManager.cpp.s
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/GameManager.cpp -o CMakeFiles/Chess.dir/GameManager.cpp.s
 
 # Object files for target Chess
 Chess_OBJECTS = \
@@ -125,7 +125,7 @@ Chess.exe: CMakeFiles/Chess.dir/Piece.cpp.o
 Chess.exe: CMakeFiles/Chess.dir/GameManager.cpp.o
 Chess.exe: CMakeFiles/Chess.dir/build.make
 Chess.exe: CMakeFiles/Chess.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Chess.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Chess.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Chess.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/Chess.dir/clean:
 .PHONY : CMakeFiles/Chess.dir/clean
 
 CMakeFiles/Chess.dir/depend:
-	cd /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug /cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles/Chess.dir/DependInfo.cmake --color=$(COLOR)
+	cd /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug /cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles/Chess.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Chess.dir/depend
 

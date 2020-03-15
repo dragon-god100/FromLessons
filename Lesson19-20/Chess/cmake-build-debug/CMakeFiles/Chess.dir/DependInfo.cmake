@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Board.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Board.cpp.o"
-  "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/GameManager.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles/Chess.dir/GameManager.cpp.o"
-  "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/Piece.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Piece.cpp.o"
-  "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/main.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-20/Chess/cmake-build-debug/CMakeFiles/Chess.dir/main.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Board.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Board.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/GameManager.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles/Chess.dir/GameManager.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/Piece.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles/Chess.dir/Piece.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/main.cpp" "/cygdrive/c/Projects/FromLessons/Lesson19-22/Chess/cmake-build-debug/CMakeFiles/Chess.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
