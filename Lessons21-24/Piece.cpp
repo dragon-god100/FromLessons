@@ -78,5 +78,27 @@ Position &Piece::getPosition() {
 }
 
 MovementArea* Piece::getMovement(Position to) {
+    // Move point to '0' position relative to piece
+    to.x -= this->current.x;
+    to.y -= this->current.y;
+
+    for(int i = 0; i < this->moves.size(); i++) {
+        // In case of vector
+        if(this->moves[i].positions.size() == 1) {
+            // Handle vector
+            continue;
+        }
+        // In case of range
+        // If to position is at the start of the range then return the movement
+        if(to.y == this->moves[i].positions[0].y
+        && to.x == this->moves[i].positions[0].x) return &(this->moves[i]);
+
+        // Find & compares derivatives
+        int m1 = (to.y - this->moves[i].positions[0].y) / (to.x - this->moves[i].positions[0].x);
+        int m2 = (this->moves[i].positions[1].y - this->moves[i].positions[0].y) / (this->moves[i].positions[1].x - this->moves[i].positions[0].x);
+        if(m1 != m2) continue;
+
+        // Check if position in range
+    }
     return nullptr;
 }

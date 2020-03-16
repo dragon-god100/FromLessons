@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/c/Projects/FromLessons/Lessons21-22/Board.cpp" "/cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/Chess.dir/Board.cpp.o"
-  "/cygdrive/c/Projects/FromLessons/Lessons21-22/Piece.cpp" "/cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/Chess.dir/Piece.cpp.o"
-  "/cygdrive/c/Projects/FromLessons/Lessons21-22/main.cpp" "/cygdrive/c/Projects/FromLessons/Lessons21-22/cmake-build-debug/CMakeFiles/Chess.dir/main.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lessons21-24/Board.cpp" "/cygdrive/c/Projects/FromLessons/Lessons21-24/cmake-build-debug/CMakeFiles/Chess.dir/Board.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lessons21-24/Piece.cpp" "/cygdrive/c/Projects/FromLessons/Lessons21-24/cmake-build-debug/CMakeFiles/Chess.dir/Piece.cpp.o"
+  "/cygdrive/c/Projects/FromLessons/Lessons21-24/main.cpp" "/cygdrive/c/Projects/FromLessons/Lessons21-24/cmake-build-debug/CMakeFiles/Chess.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
