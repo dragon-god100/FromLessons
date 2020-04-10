@@ -4,18 +4,27 @@
 #include "Piece.h"
 #include <vector>
 
+//the board will be respons on limits and options
+using std::vector;
+
 class Board
 {
-public:
-    // create board
-    Board();
-    void move(Position from, Position to);
-private:
-    std::vector<Piece> pieces;
-    const unsigned int SIZE_X = 8;
-    const unsigned int SIZE_Y = 8;
-    Piece* findPiece(Position in);
-    bool isPieceBlocking(MovementArea area, Position from, Position to);
+     public:
+          // create board
+          Board();
+
+
+     private:
+
+          Piece* findPiece(Position in);
+          bool isPieceBlocking( Position from, Position to);
+          void movePiece(Position from, Position to);
+          Piece* skipDeadPieces(Position to);
+          vector<Piece>pieces;
+          const unsigned int SIZE_X = 8;
+          const unsigned int SIZE_Y = 8;
+
+
 };
 
 #endif // BOARD_H
