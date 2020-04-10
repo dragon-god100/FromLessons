@@ -3,7 +3,7 @@
 
 Board::Board()
 {
-   for(int i = 0; i < SIZE_X; i++) this->pieces.emplace_back(Piece(i, 1, PieceType::PAWN, false));
+    for(int i = 0; i < SIZE_X; i++) this->pieces.emplace_back(Piece(i, 1, PieceType::PAWN, false));
     for(int i = 0; i < SIZE_X; i++) this->pieces.emplace_back(Piece(i, 6, PieceType::PAWN, true));
 
     this->pieces.emplace_back(Piece(4,0, PieceType::KING, true));
@@ -26,8 +26,6 @@ Board::Board()
 
     this->pieces.emplace_back(Piece(3,0, PieceType::QUEEN, true));
     this->pieces.emplace_back(Piece(3,7, PieceType::QUEEN, false));
-
-
 }
 
 Piece* Board::findPiece(Position in) {
@@ -39,32 +37,59 @@ Piece* Board::findPiece(Position in) {
     return nullptr;
 }
 
-bool Board::isPieceBlocking(Position from, Position to) {
-     for(int i = from.x; i < to.x; i++){
-          for(int j = from.y; j < to.y; j++){
-               for(int k = 0; k < this->pieces.size(); k++){
-                    if(this->pieces[i].getPosition().x == i && this->pieces[i].getPosition().y == j){
-                         return true;
-                    }
-               }
-          }
-     }
-     return false;
+bool Board::isPieceBlocking(MovementArea &movement, Position from, Position to) {
+    // Check if blocking using vector steps
+    if(movement.positions.size() == 1) {
+        Position toCheck = from;
+        while(toCheck.x != to.x - movement.positions[0].x && toCheck.y != to.y - movement.positions[0].y) {
+            toCheck.x += movement.positions[0].x;
+            toCheck.y += movement.positions[0].y;
+            if(this->findPiece(toCheck) != nullptr) return false;
+        }
+        return true;
+    }
+    else {
+        // Check if blocking in area
+        // Hint: need to use GCD
+    }
+
+    return false;
 }
 
 void Board::movePiece(Position from, Position to) {
-     for(int i = 0; i < pieces.size(); i++){
-           if(to.x - from.x == this->pieces[i].getPosition().x
-            && to.y - from.y == this->pieces[i].getPosition().y );
-     }
+    // Find piece at from
+    Piece * piece = this->findPiece(from);
+    if(piece == nullptr) {
+        std::cout << "No piece at given position!" << std::endl;
+        return;
+    }
+
+    // Get legal movement to to
+    MovementArea * movement = piece->getMovement(to);
+    if(movement == nullptr) {
+        std::cout << "Movement is illegal!" << std::endl;
+        return;
+    }
+
+    // No piece is blocking the way
+    if(this->isPieceBlocking(*movement, from, to)) {
+        std::cout << "Road is blocked!" << std::endl;
+        return;
+    }
+
+    // Consider movement type & Eat if can!
+    switch(movement->type) {
+        case MovementType::REGULAR:
+            // Has no piece at `to`
+            break;
+        case MovementType::REGULAR_EATING:
+            // Can move!
+            break;
+        case MovementType::EATING:
+            // Has to have a piece at `to`
+            break;
+    }
+
+    // Move piece to new position
+    piece->setPosition(to.x, to.y);
 }
-
-Piece* Board::skipDeadPieces(Position to){
-     for(int i = 0; i < pieces.size(); i++){
-          if(to.x )
-     }
-}
-
-
-
-

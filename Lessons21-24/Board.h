@@ -17,10 +17,9 @@ class Board
      private:
 
           Piece* findPiece(Position in);
-          bool isPieceBlocking( Position from, Position to);
+          bool isPieceBlocking(MovementArea &movement, Position from, Position to);
           void movePiece(Position from, Position to);
-          Piece* skipDeadPieces(Position to);
-          vector<Piece>pieces;
+          vector<Piece> pieces;
           const unsigned int SIZE_X = 8;
           const unsigned int SIZE_Y = 8;
 

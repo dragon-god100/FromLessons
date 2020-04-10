@@ -2,58 +2,23 @@
 #define PIECE_H
 
 #include <vector>
-
-
-using namespace std;
-
-enum class MovementType{
-    REGULAR,
-    REGULAR_EATING,
-    EATING
-};
-
-enum class PieceType{
-    KING,
-    QUEEN,
-    ROOK,
-    KNIGHT,
-    BISHOP,
-    PAWN
-};
-
-class Position {
-public:
-    unsigned int x;
-    unsigned int y;
-
-    Position(signed int x, signed int y) {
-        this->x = x;
-        this->y = y;
-    }
-};
-
-struct MovementArea {
-    // positions.size() == 1 -> vector
-    // positions.size() == 2 -> area
-    vector<Position> positions;
-    MovementType type;
-};
+#include "definitions.h"
 
 class Piece // SturdyCurl
 {
 public:
     // Create piece
-    Piece(signed int x , signed int y , PieceType type, bool is_black = false);
+    Piece(unsigned int x , unsigned int y , PieceType type, bool is_black = false);
 
-     Position& getPosition();
+    Position& getPosition();
     MovementArea* getMovement(Position to);
 
+    void setPosition(unsigned int x, unsigned int y);
 private:
     bool is_black; // under_score
-    vector<MovementArea> moves;
+    std::vector<MovementArea> moves;
     Position current;
     PieceType type;
-
 
     //helper functions
     void addMovement(Position from, Position to, MovementType type);
