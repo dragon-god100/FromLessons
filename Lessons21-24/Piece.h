@@ -11,6 +11,7 @@ public:
     Piece(unsigned int x , unsigned int y , PieceType type, bool is_black = false);
 
     Position& getPosition();
+    bool isBlack();
     MovementArea* getMovement(Position to);
 
     void setPosition(unsigned int x, unsigned int y);

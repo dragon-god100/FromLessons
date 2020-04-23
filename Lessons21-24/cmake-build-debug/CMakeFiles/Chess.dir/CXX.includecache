@@ -18,10 +18,6 @@ Piece.h
 vector
 -
 
-/cygdrive/c/Projects/FromLessons/Lessons21-24/Piece.cpp
-Piece.h
-/cygdrive/c/Projects/FromLessons/Lessons21-24/Piece.h
-
 /cygdrive/c/Projects/FromLessons/Lessons21-24/Piece.h
 vector
 -
@@ -31,10 +27,4 @@ definitions.h
 /cygdrive/c/Projects/FromLessons/Lessons21-24/definitions.h
 iostream
 -
-
-/cygdrive/c/Projects/FromLessons/Lessons21-24/main.cpp
-iostream
--
-Board.h
-/cygdrive/c/Projects/FromLessons/Lessons21-24/Board.h
 

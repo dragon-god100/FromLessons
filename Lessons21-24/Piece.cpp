@@ -117,6 +117,10 @@ void Piece::setPosition(unsigned int x, unsigned int y) {
     this->current.y = y;
 }
 
+bool Piece::isBlack() {
+    return this->is_black;
+}
+
 //Another step
 //i need write code to check who win
 //and check if the king blocking from all position

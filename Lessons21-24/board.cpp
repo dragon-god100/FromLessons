@@ -39,27 +39,30 @@ Piece* Board::findPiece(Position in) {
 
 bool Board::isPieceBlocking(MovementArea &movement, Position from, Position to) {
     // Check if blocking using vector steps
-    if(movement.positions.size() == 1) {
+    if (movement.positions.size() == 1) {
         Position toCheck = from;
-        while(toCheck.x != to.x - movement.positions[0].x && toCheck.y != to.y - movement.positions[0].y) {
+        while (toCheck.x != to.x - movement.positions[0].x && toCheck.y != to.y - movement.positions[0].y) {
             toCheck.x += movement.positions[0].x;
             toCheck.y += movement.positions[0].y;
-            if(this->findPiece(toCheck) != nullptr) return false;
+            if (this->findPiece(toCheck) != nullptr) return false;
+        }
+        return true;
+    } else {
+        // Single move in area
+        Position move(movement.positions[1].x - movement.positions[0].x, movement.positions[1].y - movement.positions[0].y);
+        int g = gcd(move.x, move.y);
+        if(g != 0) { move.x /= g; move.y /= g; }
+        Position toCheck(from.x + movement.positions[0].x, from.y + movement.positions[0].y);
+
+        // Check if blocking in area
+        if (this->findPiece(toCheck) != nullptr) return false;
+        while (toCheck.x != to.x - move.x && toCheck.y != to.y - move.y) {
+            toCheck.x += move.x;
+            toCheck.y += move.y;
+            if (this->findPiece(toCheck) != nullptr) return false;
         }
         return true;
     }
-    else {
-        // Check if blocking in area
-         while(from.x != movement.positions[1].x && from.y != movement.positions[1].y){   //(from.x != to.x && from.y != to.y)
-          from.x += movement.positions[1].x;
-          from.y += movement.positions[1].y;
-          int dcg = gcd(to.x, to.y);
-          int tump_x = to.x / dcg;
-          int tump_y = to.y / dcg;
-          if(tump_x == to.x - from.x && tump_y == to.y - from.y) return false;
-         }
-        // Hint: need to use GCD
-        return true;
 }
 
 void Board::movePiece(Position from, Position to) {
@@ -67,6 +70,12 @@ void Board::movePiece(Position from, Position to) {
     Piece * piece = this->findPiece(from);
     if(piece == nullptr) {
         std::cout << "No piece at given position!" << std::endl;
+        return;
+    }
+
+    // Get player move
+    if((this->white_turn && piece->isBlack()) || (!this->white_turn && !piece->isBlack())) {
+        std::cout << "This is " << (this->white_turn ? "white" : "black") << "'s turn!" << std::endl;
         return;
     }
 
@@ -83,19 +92,50 @@ void Board::movePiece(Position from, Position to) {
         return;
     }
 
+    // Get piece at destination
+    Piece *at_end = this->findPiece(to);
+
     // Consider movement type & Eat if can!
     switch(movement->type) {
         case MovementType::REGULAR:
             // Has no piece at `to`
+            if(at_end != nullptr) {
+                std::cout << "Road is blocked!";
+                return;
+            }
             break;
         case MovementType::REGULAR_EATING:
             // Can move!
+            if(at_end != nullptr) {
+                // Eat piece - erase piece at end
+                for(int i = 0; i < this->pieces.size(); i++) {
+                    if(this->pieces[i].getPosition().x == at_end->getPosition().x
+                    && this->pieces[i].getPosition().y == at_end->getPosition().y) {
+                        this->pieces.erase(this->pieces.begin() + i);
+                        break;
+                    }
+                }
+            }
             break;
         case MovementType::EATING:
             // Has to have a piece at `to`
+            if(at_end == nullptr) {
+                std::cout << "Can only eat this way!";
+                return;
+            }
+
+            // Eat piece - erase piece at end
+            for(int i = 0; i < this->pieces.size(); i++) {
+                if(this->pieces[i].getPosition().x == at_end->getPosition().x
+                   && this->pieces[i].getPosition().y == at_end->getPosition().y) {
+                    this->pieces.erase(this->pieces.begin() + i);
+                    break;
+                }
+            }
             break;
     }
 
     // Move piece to new position
     piece->setPosition(to.x, to.y);
+    this->white_turn = !this->white_turn;
 }

@@ -9,20 +9,18 @@ using std::vector;
 
 class Board
 {
-     public:
-          // create board
-          Board();
+public:
+    // create board
+    Board();
+    void movePiece(Position from, Position to);
 
-
-     private:
-
-          Piece* findPiece(Position in);
-          bool isPieceBlocking(MovementArea &movement, Position from, Position to);
-          void movePiece(Position from, Position to);
-          vector<Piece> pieces;
-          const unsigned int SIZE_X = 8;
-          const unsigned int SIZE_Y = 8;
-
+private:
+    bool white_turn = true;
+    Piece* findPiece(Position in);
+    bool isPieceBlocking(MovementArea &movement, Position from, Position to);
+    vector<Piece> pieces;
+    const unsigned int SIZE_X = 8;
+    const unsigned int SIZE_Y = 8;
 
 };
 
