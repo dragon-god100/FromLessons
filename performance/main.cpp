@@ -2,7 +2,15 @@
 #include <chrono>
 #include <random>
 
+struct hi {
+    int a;
+    char b;
+    double c;
+};
+
 int main() {
+    std::cout << sizeof(hi) << std::endl;
+
     int s = 640000;
     int *myarr = new int[s];
 
