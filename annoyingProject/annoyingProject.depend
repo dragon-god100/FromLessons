@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1592395225 source:c:\users\hystou\desktop\annoyingproject\src\arraybitch.cpp
+	"arrayBitch.h"
+	<iostream>
+
+1592395225 c:\users\hystou\desktop\annoyingproject\include\arraybitch.h
+	"arrayBitch.h"
+
+1592395225 source:c:\users\hystou\desktop\annoyingproject\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1592395225 c:\users\hystou\desktop\annoyingproject\include\node.h
+	"Node.h"
+	<iostream>
+
+1592395324 source:c:\users\hystou\desktop\annoyingproject\main.cpp
+	<iostream>
+	"arrayBitch.h"
+	"Node.h"
+
