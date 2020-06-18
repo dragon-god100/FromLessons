@@ -4,21 +4,21 @@
 #include <vector>
 #include "definitions.h"
 
-using namespace std;
-
 class Piece // SturdyCurl
 {
 public:
     // Create piece
-    Piece(signed int x , signed int y , PieceType type, bool is_black = false);
+    Piece(unsigned int x , unsigned int y , PieceType type, bool is_black = false);
 
     Position& getPosition();
+    bool isBlack();
     MovementArea* getMovement(Position to);
 
+    void setPosition(unsigned int x, unsigned int y);
 private:
     bool is_black; // under_score
+    std::vector<MovementArea> moves;
     Position current;
-    vector<MovementArea> moves;
     PieceType type;
 
     //helper functions
@@ -30,6 +30,7 @@ private:
     void setKingMovements();
     void setBishopMovements();
     void setRookMovements();
+    void setAllPiecesMovements();
 };
 
 #endif // PIECE_H

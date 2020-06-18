@@ -1,8 +1,8 @@
 #include "Piece.h"
 
-Piece::Piece(signed int x, signed int y, PieceType type, bool is_black) : current(x, y)
+Piece::Piece(unsigned int x, unsigned int y, PieceType type, bool is_black) : current(x, y) // current is x,y in a private
 {
-     this->is_black = is_black;
+     this->is_black = is_black; //the defult is black
      this->type = type;
 
      //set moves
@@ -15,16 +15,16 @@ Piece::Piece(signed int x, signed int y, PieceType type, bool is_black) : curren
          case PieceType::BISHOP: this->setBishopMovements(); break;
     }
 }
-
+// movement that define range
 void Piece::addMovement(Position from, Position to, MovementType type) {
-    this->moves.emplace_back(); // Add element
+    this->moves.push_back(MovementArea()); // Add element
     this->moves.back().positions.push_back(from);
     this->moves.back().positions.push_back(to);
     this->moves.back().type = type;
 }
-
+//movement that define vector
 void Piece::addMovement(Position vector, MovementType type) {
-    this->moves.emplace_back();
+    this->moves.push_back(MovementArea());
     this->moves.back().positions.push_back(vector);
     this->moves.back().type = type;
 }
@@ -85,20 +85,43 @@ MovementArea* Piece::getMovement(Position to) {
     for(int i = 0; i < this->moves.size(); i++) {
         // In case of vector
         if(this->moves[i].positions.size() == 1) {
-            // Handle vector
+            // Get GCD of to
+            int g = gcd(to.x, to.y);
+            int temp_x = to.x / g;
+            int temp_y = to.y / g;
+
+            if(temp_x == this->moves[i].positions[0].x
+            && temp_y == this->moves[i].positions[0].y) return &(this->moves[i]);
             continue;
         }
+
         // In case of range
         // If to position is at the start of the range then return the movement
         if(to.y == this->moves[i].positions[0].y
         && to.x == this->moves[i].positions[0].x) return &(this->moves[i]);
 
         // Find & compares derivatives
-        int m1 = (to.y - this->moves[i].positions[0].y) / (to.x - this->moves[i].positions[0].x);
+        int m1 = (to.y - this->moves[i].positions[0].y) / (to.x - this->moves[i].positions[0].x); // Y2-Y1 / X2-X1
         int m2 = (this->moves[i].positions[1].y - this->moves[i].positions[0].y) / (this->moves[i].positions[1].x - this->moves[i].positions[0].x);
         if(m1 != m2) continue;
 
         // Check if position in range
+        if(to.x <= this->moves[i].positions[1].x && to.x >= this->moves[i].positions[0].x
+        && to.y <= this->moves[i].positions[1].y && to.y >= this->moves[i].positions[0].y) return &(this->moves[i]);
     }
     return nullptr;
 }
+
+void Piece::setPosition(unsigned int x, unsigned int y) {
+    this->current.x = x;
+    this->current.y = y;
+}
+
+bool Piece::isBlack() {
+    return this->is_black;
+}
+
+//Another step
+//i need write code to check who win
+//and check if the king blocking from all position
+//check if the king threatened

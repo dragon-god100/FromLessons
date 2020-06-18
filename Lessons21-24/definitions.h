@@ -5,13 +5,19 @@
 #ifndef CHESS_DEFINITIONS_H
 #define CHESS_DEFINITIONS_H
 
-enum class MovementType{
-    REGULAR,
-    REGULAR_EATING,
-    EATING
-};
+#include <iostream>
 
-enum class PieceType{
+inline int gcd(int x, int y) {
+    while(y != 0) {
+        int temp = y;
+        y = y % x;
+        x = y;
+    }
+
+    return x;
+}
+
+enum class PieceType {
     KING,
     QUEEN,
     ROOK,
@@ -29,6 +35,12 @@ public:
         this->x = x;
         this->y = y;
     }
+};
+
+enum class MovementType {
+    REGULAR,
+    REGULAR_EATING,
+    EATING
 };
 
 struct MovementArea {
