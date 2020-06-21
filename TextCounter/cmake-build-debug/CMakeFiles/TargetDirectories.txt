@@ -1,0 +1,3 @@
+/cygdrive/c/Projects/FromLessons/TextCounter/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Projects/FromLessons/TextCounter/cmake-build-debug/CMakeFiles/TextCounter.dir
+/cygdrive/c/Projects/FromLessons/TextCounter/cmake-build-debug/CMakeFiles/edit_cache.dir

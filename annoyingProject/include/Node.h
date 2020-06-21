@@ -4,16 +4,19 @@
 
 #include <iostream>
 
+struct LinkNode {
+    int data;
+    LinkNode* next;
+};
+
 class Node
 {
      public:
-
-
           int data;
           Node* next;
 
           void push(Node ** head, int new_data);
-          void  sortLinkedList();
+          Node* sortLinkedList();
           void printLinkedList();
           void removeElement(int remValue) ;
 

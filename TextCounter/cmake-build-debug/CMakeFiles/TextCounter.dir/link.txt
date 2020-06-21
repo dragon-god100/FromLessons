@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/TextCounter.dir/main.cpp.o  -o TextCounter.exe -Wl,--out-implib,libTextCounter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

@@ -1,4 +1,4 @@
-#include "arrayBitch.h"
+#include "../include/arrayBitch.h"
 #include <iostream>
 using namespace std;
 

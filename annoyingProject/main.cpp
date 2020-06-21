@@ -29,7 +29,7 @@ int main()
         {
             int command;
 
-            cout << "enter command that you want(0 - add value, 1 - remove value , 2 - sort, 3 - exit ): ";
+            cout << "enter command that you want(0 - add value, 1 - remove value , 2 - sort, 3 - exit): ";
             cin >> command;
 
             if (command == 4)
@@ -59,7 +59,7 @@ int main()
             }
             else if (command == 2)
             {
-                head->sortLinkedList();
+                head = head->sortLinkedList();
             }
 
             else if (command == 3)

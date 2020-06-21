@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Projects/FromLessons/annoyingProject/include/Node.h
+Node.h
+/cygdrive/c/Projects/FromLessons/annoyingProject/include/Node.h
+iostream
+-
+
+/cygdrive/c/Projects/FromLessons/annoyingProject/src/Node.cpp
+../include/Node.h
+/cygdrive/c/Projects/FromLessons/annoyingProject/include/Node.h
+iostream
+-
+

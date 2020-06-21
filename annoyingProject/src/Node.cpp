@@ -1,4 +1,4 @@
-#include "Node.h"
+#include "../include/Node.h"
 #include <iostream>
 using namespace std;
 
@@ -32,37 +32,42 @@ void Node::push(struct Node ** head, int new_data) {
     return;
 }
 
-  void Node::sortLinkedList()
+Node* Node::sortLinkedList()
 {
-    if (this != 0)
+    Node* start = this;
+    Node* current = this;
+    Node* tempNode = nullptr;
+    Node* prev = nullptr;
+    bool changeFlag = true;
+
+    while(changeFlag)
     {
-        Node* current = this;
-        Node* prev = 0;
-        Node* tempNode = 0;
-        bool changeFlag = true;
-        while(changeFlag)
+        current = start;
+        changeFlag = false;
+        prev = nullptr;
+
+        while (current->next != nullptr)
         {
-               prev = 0;
-                current = this;
-                changeFlag = false;
+            tempNode = current->next;
 
-            while (current->next != 0)
+            if (current->data > tempNode->data)
             {
-                tempNode = current->next;
-
-                if (current->data > tempNode->data)
-                {
-                    changeFlag = true;
-                     std::swap(current->data, tempNode->data);
-                }
-                else
-                {
-                    prev = current;
-                    current = current->next;
-                }
+                changeFlag = true;
+                Node* temp = tempNode->next;
+                tempNode->next = current;
+                current->next = temp;
+                if(prev != nullptr) prev->next = tempNode;
+                prev = tempNode;
+                if(current == start) start = tempNode;
+            }
+            else{
+                prev = current;
+                current = current->next;
             }
         }
     }
+
+    return start;
 }
 
  void Node::printLinkedList(){
