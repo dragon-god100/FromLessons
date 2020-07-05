@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1593632410 source:c:\users\hystou\desktop\bank system manger\main.cpp
+	"include/Client.h"
+	<iostream>
+
+1593632498 source:c:\users\hystou\desktop\bank system manger\src\client.cpp
+	"Client.h"
+	<iostream>
+
+1593632163 c:\users\hystou\desktop\bank system manger\include\client.h
+	<iostream>
+
