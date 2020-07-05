@@ -1,0 +1,3 @@
+/cygdrive/c/Projects/FromLessons/bank system manger/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Projects/FromLessons/bank system manger/cmake-build-debug/CMakeFiles/BankingSystem.dir
+/cygdrive/c/Projects/FromLessons/bank system manger/cmake-build-debug/CMakeFiles/edit_cache.dir

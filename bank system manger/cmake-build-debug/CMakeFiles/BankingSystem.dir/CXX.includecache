@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Projects/FromLessons/bank system manger/Client.cpp
+Client.h
+/cygdrive/c/Projects/FromLessons/bank system manger/Client.h
+iostream
+-
+
+/cygdrive/c/Projects/FromLessons/bank system manger/Client.h
+iostream
+-
+
+/cygdrive/c/Projects/FromLessons/bank system manger/main.cpp
+Client.h
+/cygdrive/c/Projects/FromLessons/bank system manger/Client.h
+iostream
+-
+

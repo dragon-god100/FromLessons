@@ -1,9 +1,9 @@
-#include "include/Client.h"
+#include "Client.h"
 #include <iostream>
 
 struct BankUser {
     std::string name;
-    std::string  family_name;
+    std::string family_name;
     std::string mail;
     int credit;
     int age;
@@ -24,18 +24,18 @@ int main() {
 
 
    while(true){
-      cout << endl <<"enter your id: ";
-      cin >> youlog.id;
-      cout << endl << "enter your password: ";
-      cin >> youlog.password;
-     if(client.password == youlog.password && client.id == youlog.id){
-          cout << "the process success. welcome :)";
-          break;
-     }
-   else if(client.password != youlog.password || client.id != youlog.id){
-          cout << "worng answer. try again: " << endl;
-          continue;
-     }
+       cout << endl <<"enter your id: ";
+       cin >> youlog.id;
+       cout << endl << "enter your password: ";
+       cin >> youlog.password;
+       if(client.password == youlog.password && client.id == youlog.id){
+           cout << "the process success. welcome :)";
+           break;
+       }
+       else if(client.password != youlog.password || client.id != youlog.id){
+           cout << "worng answer. try again: " << endl;
+           continue;
+       }
    }
    while(true){
       //get command
