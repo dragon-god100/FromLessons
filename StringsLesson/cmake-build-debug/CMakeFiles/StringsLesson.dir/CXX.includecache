@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Projects/FromLessons/StringsLesson/MyString.h
+
+/cygdrive/c/Projects/FromLessons/StringsLesson/main.cpp
+iostream
+-
+cstring
+-
+string
+-
+MyString.h
+/cygdrive/c/Projects/FromLessons/StringsLesson/MyString.h
+
