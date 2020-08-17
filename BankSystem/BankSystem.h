@@ -2,14 +2,35 @@
 // Created by Lotus on 05/07/2020.
 //
 
-#ifndef BANKSYSTEM_BANKDATA_H
-#define BANKSYSTEM_BANKDATA_H
+#ifndef BANKSYSTEM_BANKSYSTEM_H
+#define BANKSYSTEM_BANKSYSTEM_H
 
 #include "Client.h"
 #include "Worker.h"
 #include <vector>
 
-inline std::vector<Client> clients = {};
-inline std::vector<Worker> workers = {};
+// Data-oriented design
+struct BankData { // Struct type called BankData
+    std::vector<ClientData> clients = {};
+    std::vector<WorkerData> workers = {};
+};
 
-#endif //BANKSYSTEM_BANKDATA_H
+inline BankData bankData = {};
+
+class BankSystem {
+public:
+    BankSystem();
+
+    void clientRegister();
+    void workerRegister();
+    void clientLogin();
+    void workerLogin();
+    void create();
+    void remove();
+
+    bool console(); // Main system console
+private:
+    ClientData* logged_client = nullptr;
+    WorkerData* logged_worker = nullptr;
+};
+#endif //BANKSYSTEM_BANKSYSTEM_H

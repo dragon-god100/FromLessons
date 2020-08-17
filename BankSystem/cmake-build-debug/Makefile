@@ -123,6 +123,33 @@ BankSystem/fast:
 	$(MAKE) -f CMakeFiles/BankSystem.dir/build.make CMakeFiles/BankSystem.dir/build
 .PHONY : BankSystem/fast
 
+BankSystem.o: BankSystem.cpp.o
+
+.PHONY : BankSystem.o
+
+# target to build an object file
+BankSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/BankSystem.dir/build.make CMakeFiles/BankSystem.dir/BankSystem.cpp.o
+.PHONY : BankSystem.cpp.o
+
+BankSystem.i: BankSystem.cpp.i
+
+.PHONY : BankSystem.i
+
+# target to preprocess a source file
+BankSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/BankSystem.dir/build.make CMakeFiles/BankSystem.dir/BankSystem.cpp.i
+.PHONY : BankSystem.cpp.i
+
+BankSystem.s: BankSystem.cpp.s
+
+.PHONY : BankSystem.s
+
+# target to generate assembly for a file
+BankSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/BankSystem.dir/build.make CMakeFiles/BankSystem.dir/BankSystem.cpp.s
+.PHONY : BankSystem.cpp.s
+
 Client.o: Client.cpp.o
 
 .PHONY : Client.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... BankSystem"
 	@echo "... edit_cache"
+	@echo "... BankSystem.o"
+	@echo "... BankSystem.i"
+	@echo "... BankSystem.s"
 	@echo "... Client.o"
 	@echo "... Client.i"
 	@echo "... Client.s"

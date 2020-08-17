@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Projects/FromLessons/BankSystem/BankSystem.cpp">
+			<Option target="BankSystem"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Projects/FromLessons/BankSystem/BankSystem.h">
+			<Option target="BankSystem"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Projects/FromLessons/BankSystem/Client.cpp">
 			<Option target="BankSystem"/>
 		</Unit>

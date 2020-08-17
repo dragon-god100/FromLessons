@@ -3,65 +3,15 @@
 //
 
 #include "Client.h"
-#include "BankData.h"
+#include "BankSystem.h"
 
 using namespace std;
 
-void Client::showInfo() {
+void Client::showInfo(ClientData& client) {
 
 }
 
-void Client::signup() {
-    cout << "enter your name: ";
-    cin >> this->name;
-    cout << endl;
-
-    cout << "enter your family name : ";
-    cin >> this->family_name;
-    cout << endl;
-
-    cout << "enter your mail: ";
-    cin >> this->email;
-    cout << endl;
-
-    cout << "enter your age : ";
-    cin >> this->age;
-    cout << endl;
-
-    cout << "enter your bank branch: ";
-    cin >> this->branch;
-    cout << endl;
-
-    cout << "enter your id: ";
-    cin >> this->id;
-    cout << endl;
-
-    cout << "enter your password: ";
-    cin >> this->password;
-    cout << endl;
-}
-
-Client* Client::login() {
-    int current_id;
-    int current_pass;
-
-    cout << "hello, enter your id: ";
-    cin >> current_id;
-    cout << "enter your password: ";
-    cin >> current_pass;
-
-    for(int i = 0; i < clients.size(); i++) {
-        if (clients[i].password == current_pass && clients[i].id == current_id) {
-            cout << "the process success. welcome " << clients[i].name << " :)";
-            return &(clients[i]);
-        }
-    }
-
-    cout << "Client not found" << endl;
-    return nullptr;
-}
-
-void Client::clientConsole() {
+void Client::clientConsole(ClientData& client) {
     int deposit;
     int withdrawl;
 
@@ -78,7 +28,7 @@ void Client::clientConsole() {
         }
         switch(command){
             case 0:
-                this->additionalActions();
+                Client::additionalActions(client);
                 break;
             case 1:
                 cout << "enter your deposit : ";
@@ -91,12 +41,12 @@ void Client::clientConsole() {
                 withdrawl += withdrawl;
                 break;
         }
-        this->total_money = deposit - withdrawl ;
+        client.total_money = deposit - withdrawl ;
     }
-    cout << "you have " << this->total_money << "$" << endl;
+    cout << "you have " << client.total_money << "$" << endl;
 }
 
-void Client::additionalActions() {
+void Client::additionalActions(ClientData& client) {
     while(true){
         int commando;
         cout << "enter command(0 - calculate security deposit  , 1 - information about you,  2 - exit)";
@@ -108,16 +58,16 @@ void Client::additionalActions() {
         }
         switch(commando){
             case 0:
-                this->ribit();
+                Client::ribit(client);
                 break;
             case 1:
-                this->showInfo();
+                Client::showInfo(client);
                 break;
         }
     }
 }
 
-void Client::ribit() {
+void Client::ribit(ClientData& client) {
     int secure_deposit;
     int years;
     int total_money;

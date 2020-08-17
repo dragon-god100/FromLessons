@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/cygdrive/c/Projects/FromLessons/BankSystem/BankSystem.cpp" "/cygdrive/c/Projects/FromLessons/BankSystem/cmake-build-debug/CMakeFiles/BankSystem.dir/BankSystem.cpp.o"
   "/cygdrive/c/Projects/FromLessons/BankSystem/Client.cpp" "/cygdrive/c/Projects/FromLessons/BankSystem/cmake-build-debug/CMakeFiles/BankSystem.dir/Client.cpp.o"
   "/cygdrive/c/Projects/FromLessons/BankSystem/Worker.cpp" "/cygdrive/c/Projects/FromLessons/BankSystem/cmake-build-debug/CMakeFiles/BankSystem.dir/Worker.cpp.o"
   "/cygdrive/c/Projects/FromLessons/BankSystem/main.cpp" "/cygdrive/c/Projects/FromLessons/BankSystem/cmake-build-debug/CMakeFiles/BankSystem.dir/main.cpp.o"

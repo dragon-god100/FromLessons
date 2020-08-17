@@ -7,7 +7,10 @@
 
 #include <iostream>
 #include <vector>
-#include "BankData.h"
+
+struct WorkerData {
+    // What data does a worker hold?
+};
 
 class Worker {
 public:

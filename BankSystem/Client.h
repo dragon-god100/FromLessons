@@ -8,10 +8,7 @@
 #include <iostream>
 #include <string>
 
-
-class Client {
-public:
-    // Client metadata
+struct ClientData {
     std::string name;
     std::string family_name;
     std::string email;
@@ -19,18 +16,17 @@ public:
     int age;
     int password;
     int branch;
-
-    // Client bank data
     int total_money;
+};
 
+
+class Client {
+public:
     // Client functions
-    void showInfo();
-    void signup();
-    void clientConsole();
-    void additionalActions();
-    void ribit();
-
-    static Client* login(); // No what what object, this is the same function
+    static void showInfo(ClientData& client);
+    static void clientConsole(ClientData& client);
+    static void additionalActions(ClientData& client);
+    static void ribit(ClientData& client);
 };
 
 
