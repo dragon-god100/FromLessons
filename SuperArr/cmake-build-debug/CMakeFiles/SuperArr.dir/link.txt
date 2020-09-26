@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/SuperArr.dir/main.cpp.o CMakeFiles/SuperArr.dir/SuperArray.cpp.o  -o SuperArr.exe -Wl,--out-implib,libSuperArr.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

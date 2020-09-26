@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Projects/FromLessons/SuperArr/SuperArray.cpp
+SuperArray.h
+/cygdrive/c/Projects/FromLessons/SuperArr/SuperArray.h
+exception
+-
+stdexcept
+-
+
+/cygdrive/c/Projects/FromLessons/SuperArr/SuperArray.h
+
