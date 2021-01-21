@@ -15,7 +15,7 @@ struct BankData { // Struct type called BankData
     std::vector<WorkerData> workers = {};
 };
 
-inline BankData bankData = {};
+inline struct BankData bankData = {};
 
 class BankSystem {
 public:
